@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Founder Command Centre · AI Her Way</title>
+<meta name="description" content="A personal AI board of advisors and a daily brief, installed and running inside Claude. Five agentic staff members for founders, by Dr Nici Sweaney — AI Her Way.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#252620; --linen:#F1EAE1; --cream:#F8F6F3; --forest:#22392C;
+    --sage:#C0CACE; --clay:#876553; --ink:#3A3A33;
+    --font-heading:'Noto Serif Display',Georgia,serif;
+    --font-body:'DM Sans','Inter',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body);color:var(--charcoal);background:var(--linen);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:var(--font-heading);font-weight:600;line-height:1.14;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+  .eyebrow{font-family:var(--font-body);font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;}
+  section{padding:84px 0;}
+  .btn{display:inline-block;font-family:var(--font-body);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:18px 30px;border:0;cursor:pointer;text-decoration:none;transition:transform .12s ease, opacity .12s ease;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--sage);color:var(--forest);}
+  .btn-ghost{background:transparent;color:var(--linen);border:1.5px solid var(--sage);}
+  .btn-forest{background:var(--forest);color:var(--linen);}
+
+  /* HERO */
+  .hero{background:var(--charcoal);color:var(--linen);padding:64px 0 88px;}
+  .topbar{display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:64px;}
+  .hero .eyebrow{color:var(--clay);margin-bottom:20px;}
+  .hero h1{font-size:clamp(40px,7vw,68px);color:var(--linen);max-width:14ch;}
+  .hero h1 em{font-style:italic;color:var(--clay);}
+  .rule{width:120px;height:5px;background:var(--clay);margin:30px 0;}
+  .hero .lead{font-family:var(--font-heading);font-style:italic;font-size:clamp(18px,2.4vw,22px);color:var(--sage);max-width:42ch;margin-bottom:36px;}
+  .cta-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-meta{display:flex;gap:46px;flex-wrap:wrap;margin-top:48px;}
+  .hero-meta .k{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:6px;}
+  .hero-meta .v{font-size:14px;color:var(--linen);}
+
+  /* WHAT */
+  .what{background:var(--linen);}
+  .sec-head{margin-bottom:44px;}
+  .sec-head .eyebrow{color:var(--clay);margin-bottom:14px;}
+  .sec-head h2{font-size:clamp(28px,4vw,38px);color:var(--forest);}
+  .sec-head h2 em{font-style:italic;color:var(--clay);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+  .card{background:#fff;border:1.5px solid var(--forest);padding:30px 28px;}
+  .card .tag{display:inline-block;background:var(--sage);color:var(--forest);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 11px;margin-bottom:14px;}
+  .card .tag.grow{background:#E7DCCF;color:var(--clay);}
+  .card h3{font-size:21px;color:var(--forest);margin-bottom:8px;}
+  .card p{font-size:14.5px;color:var(--ink);}
+  .card .trigger{display:block;margin-top:14px;font-size:12.5px;color:var(--clay);font-style:italic;font-family:var(--font-heading);}
+
+  /* INSTALL */
+  .install{background:var(--charcoal);color:var(--linen);}
+  .install .sec-head h2{color:var(--linen);}
+  .install .sec-head .eyebrow{color:var(--sage);}
+  .methods{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .method{background:#2E302A;border:1.5px solid #44463C;padding:34px 30px;}
+  .method .num{font-family:var(--font-heading);font-size:30px;color:var(--sage);line-height:1;margin-bottom:12px;}
+  .method h3{font-size:22px;color:var(--linen);margin-bottom:6px;}
+  .method .sub{font-size:13px;color:var(--clay);text-transform:uppercase;letter-spacing:.12em;font-weight:600;margin-bottom:18px;}
+  .method ol{margin:0 0 22px 0;padding-left:20px;}
+  .method ol li{font-size:14.5px;color:var(--linen);margin-bottom:10px;padding-left:4px;}
+  .method ol li b{color:var(--sage);}
+  .code{display:flex;align-items:center;gap:10px;background:#1C1D18;border-left:5px solid var(--clay);padding:14px 16px;margin:6px 0 18px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:var(--linen);word-break:break-all;}
+  .code button{margin-left:auto;flex:0 0 auto;background:var(--sage);color:var(--forest);border:0;font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 11px;cursor:pointer;}
+  .note{font-size:13px;color:var(--sage);margin-top:6px;}
+
+  /* FALLBACK STRIP */
+  .strip{background:var(--forest);color:var(--linen);padding:40px 0;}
+  .strip .wrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:space-between;}
+  .strip p{font-family:var(--font-heading);font-style:italic;font-size:19px;max-width:60ch;}
+  .strip b{color:var(--sage);font-style:normal;}
+
+  /* FOOTER */
+  footer{background:var(--charcoal);color:var(--sage);padding:54px 0;border-top:1px solid #44463C;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+  footer .brand{font-family:var(--font-heading);font-size:20px;color:var(--linen);}
+  footer a{color:var(--sage);text-decoration:none;border-bottom:1px solid var(--clay);}
+  footer .small{font-size:12px;letter-spacing:.04em;}
+
+  @media(max-width:720px){
+    .methods{grid-template-columns:1fr;}
+    section{padding:60px 0;}
+    .hero-meta{gap:28px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <span>AI Her Way</span>
+      <span>Founder Command Centre</span>
+    </div>
+    <p class="eyebrow">A starter team of agentic staff · for founders</p>
+    <h1>The Founder <em>Command Centre</em></h1>
+    <div class="rule"></div>
+    <p class="lead">A personal AI board of advisors and a daily brief — installed and running inside Claude. Not a tool you visit. A team you keep.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="ai-herway-founder-command-centre.plugin" download>Download the plugin</a>
+      <a class="btn btn-ghost" href="#install">How to install</a>
+    </div>
+    <div class="hero-meta">
+      <div><div class="k">Built for</div><div class="v">Founders &amp; small teams</div></div>
+      <div><div class="k">Runs in</div><div class="v">Claude desktop app</div></div>
+      <div><div class="k">Inside</div><div class="v">5 agentic staff members</div></div>
+      <div><div class="k">By</div><div class="v">Dr Nici Sweaney</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- WHAT YOU INSTALL -->
+<section class="what">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What you install</p>
+      <h2>Five team members who <em>never sleep</em></h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Hero</span>
+        <h3>Board of Advisors</h3>
+        <p>Four expert advisors pressure-test any decision, surface the tension, and give you one clear recommendation.</p>
+        <span class="trigger">“Be my board of advisors”</span>
+      </div>
+      <div class="card">
+        <span class="tag">Hero</span>
+        <h3>Daily Brief</h3>
+        <p>A calm 60-second morning brief: the one thing that matters, your day’s shape, what needs you, and a nudge.</p>
+        <span class="trigger">“My daily brief”</span>
+      </div>
+      <div class="card">
+        <span class="tag grow">Grow into</span>
+        <h3>Content Engine</h3>
+        <p>Turn one idea into a week of content that sounds like you — not like AI.</p>
+        <span class="trigger">“Repurpose this”</span>
+      </div>
+      <div class="card">
+        <span class="tag grow">Grow into</span>
+        <h3>Meeting Prep &amp; Follow-up</h3>
+        <p>Walk in ready, walk out with the recap and next steps already written.</p>
+        <span class="trigger">“Prep me for my meeting”</span>
+      </div>
+      <div class="card">
+        <span class="tag grow">Grow into</span>
+        <h3>Inbox Triage</h3>
+        <p>Cut your inbox to what truly needs you, with the replies already drafted.</p>
+        <span class="trigger">“Triage my inbox”</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALL -->
+<section class="install" id="install">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Two ways in</p>
+      <h2>Install your Command Centre</h2>
+    </div>
+    <div class="methods">
+      <div class="method">
+        <div class="num">01</div>
+        <h3>Quick — download the file</h3>
+        <div class="sub">Best for getting started today</div>
+        <ol>
+          <li>Click <b>Download the plugin</b> to save the file.</li>
+          <li>Open it in the <b>Claude desktop app</b>.</li>
+          <li>Review the skills and press <b>Add</b>.</li>
+          <li>Test it: type <b>“be my board of advisors”</b> — you’re in.</li>
+        </ol>
+        <a class="btn btn-primary" href="ai-herway-founder-command-centre.plugin" download>Download the plugin</a>
+      </div>
+      <div class="method">
+        <div class="num">02</div>
+        <h3>Ongoing — add our library</h3>
+        <div class="sub">Auto-updates as we add new staff</div>
+        <ol>
+          <li>In Claude, open the plugin / marketplace settings.</li>
+          <li>Add this as a marketplace source:</li>
+        </ol>
+        <div class="code"><span id="src">your-github-username/founder-command-centre</span><button onclick="copySrc()">Copy</button></div>
+        <ol start="3">
+          <li>Install <b>AI Her Way Founder Command Centre</b> from the library.</li>
+          <li>You’ll get every future skill and update automatically.</li>
+        </ol>
+        <p class="note">New agents are added to this same library over time — install once, grow forever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FALLBACK STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <p><b>No one gets left behind.</b> Can’t install? Every skill also comes as a copy-paste version you can drop straight into a Claude Project — it works exactly the same way.</p>
+    <a class="btn btn-forest" href="https://www.aiherway.com.au" style="border:1.5px solid var(--sage);">Visit AI Her Way</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand">AI Her Way</div>
+      <div class="small" style="margin-top:6px;">Build out your whole agentic team inside the AI for Impact Hub.</div>
+    </div>
+    <div class="small" style="text-align:right;">
+      <a href="https://www.aiherway.com.au">aiherway.com.au</a><br>
+      © AI Her Way · Dr Nici Sweaney · Australian English throughout.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Auto-fill the marketplace source from the GitHub Pages URL once hosted,
+  // e.g. https://USERNAME.github.io/REPO/  ->  USERNAME/REPO
+  (function(){
+    try{
+      var host = location.hostname;          // username.github.io
+      var path = location.pathname.split('/').filter(Boolean);
+      if(host.endsWith('github.io') && path.length){
+        var user = host.replace('.github.io','');
+        var repo = path[0];
+        document.getElementById('src').textContent = user + '/' + repo;
+      }
+    }catch(e){}
+  })();
+  function copySrc(){
+    var t = document.getElementById('src').textContent;
+    navigator.clipboard && navigator.clipboard.writeText(t);
+    var b = event.target; var o = b.textContent; b.textContent='Copied'; setTimeout(function(){b.textContent=o;},1200);
+  }
+</script>
+</body>
+</html>
