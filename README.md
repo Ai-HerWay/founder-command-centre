@@ -9,11 +9,12 @@ Built for the Women's AI Boardroom Retreat with Nikki Fogden-Moore. By Dr Nici S
 
 ## What's inside
 
-The **Founder Command Centre** plugin gives you five agentic staff members inside Claude:
+The **Founder Command Centre** plugin gives you six agentic staff members inside Claude:
 
 - **Board of Advisors** — pressure-tests any decision and gives one clear recommendation. *"Be my board of advisors."*
 - **Daily Brief** — a calm 60-second morning brief. *"My daily brief."*
 - **Content Engine** — one idea becomes a week of content in your voice. *"Repurpose this."*
+- **Carousel Creator** — one idea becomes a finished, on-brand Instagram carousel: hooks, slide copy, caption, CTA, and the slide images. *"Make me a carousel."*
 - **Meeting Prep & Follow-up** — walk in ready, walk out with the recap written. *"Prep me for my meeting."*
 - **Inbox Triage** — what needs you, with replies drafted. *"Triage my inbox."*
 

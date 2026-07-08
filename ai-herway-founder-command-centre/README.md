@@ -13,6 +13,9 @@ you have a small team that never sleeps:
   or schedule it to run each morning.
 - **Content Engine (Repurposer)** — turn one idea into a week of content in your voice.
   Say *"repurpose this"* or *"turn this into posts"*.
+- **Carousel Creator** — turn one idea into a finished, on-brand Instagram carousel:
+  the hooks, the slide-by-slide copy, the caption, the call-to-action, and the branded
+  slide images ready to post. Say *"make me a carousel"* or *"turn this into a carousel"*.
 - **Meeting Prep & Follow-up** — walk in ready, walk out with the recap already
   written. Say *"prep me for my meeting"* or *"write up my notes"*.
 - **Inbox Triage** — cut your inbox down to what actually needs you, with replies
@@ -36,9 +39,9 @@ No problem. Every skill also comes as a plain **copy-paste version** (see
 Project's custom instructions and it works the same way — you'll still leave the
 session with your Command Centre running.
 
-## The five skills, and what comes next
+## The six skills, and what comes next
 
-These five are your foundation. The full **AI Her Way Agentic Team** — deeper role
+These six are your foundation. The full **AI Her Way Agentic Team** — deeper role
 cards, the 90-day build order, and the community building alongside you — lives inside
 the **AI for Impact Hub**.
 

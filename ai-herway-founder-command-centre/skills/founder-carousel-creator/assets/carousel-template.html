@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Her Way — Instagram Carousel</title>
+<!--
+  HOW TO USE THIS TEMPLATE (for the assistant building the deck)
+  ---------------------------------------------------------------
+  1. Copy this whole file. Keep the <style> block exactly as-is — it IS the brand.
+  2. In <body>, replace the example .slide blocks with one block per slide of copy.
+     - Cover slide  -> class="slide cover"      (charcoal) — the hook
+     - Content slide-> class="slide content" or "slide content dark" — one point each
+     - Quote slide  -> class="slide quote"       (linen) — a big pull-quote moment
+     - CTA slide    -> class="slide cta"         (charcoal) — the final call-to-action
+  3. Alternate light and dark for rhythm. Cover + CTA are charcoal. Aim for 8–10 slides.
+  4. Keep text SHORT so it stays large. If it looks cramped, cut words or add a slide.
+  5. Set data-num on content slides ("01", "02"…) and data-count on every slide ("1/10").
+  6. Export: open in a browser -> Print -> Save as PDF. Each slide = one 1080×1350 page.
+
+  HOW TO USE IT (for the founder)
+  -------------------------------
+  Open this file in your browser. Choose Print, then "Save as PDF". You'll get one
+  image per slide, sized for Instagram. Upload them in order. (Or screenshot each slide.)
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#252620; --linen:#F1EAE1; --cream:#F8F6F3; --forest:#22392C;
+    --sage:#C0CACE; --clay:#876553; --ink:#3A3A33;
+    --font-heading:'Noto Serif Display',Georgia,serif;
+    --font-body:'DM Sans','Inter',-apple-system,sans-serif;
+    --pad:96px;              /* safe margin */
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:#d9d2c8;font-family:var(--font-body);-webkit-font-smoothing:antialiased;}
+
+  /* Screen preview: stack slides with breathing room. Print resets this. */
+  .deck{display:flex;flex-direction:column;align-items:center;gap:28px;padding:40px 0;}
+  .howto{max-width:1080px;margin:0 auto 8px;padding:20px 24px;background:#fff;border:2px solid var(--forest);
+         font-family:var(--font-body);font-size:14px;color:var(--charcoal);line-height:1.5;}
+  .howto b{color:var(--forest);}
+
+  /* THE SLIDE — Instagram portrait 1080 x 1350 */
+  .slide{
+    position:relative;width:1080px;height:1350px;overflow:hidden;
+    padding:var(--pad);display:flex;flex-direction:column;
+    box-shadow:0 8px 40px rgba(37,38,32,.18);
+  }
+  .slide.light,.slide.quote{background:var(--linen);color:var(--charcoal);}
+  .slide.dark,.slide.cover,.slide.cta,.slide.content.dark{background:var(--charcoal);color:var(--linen);}
+  .slide.content{background:var(--linen);color:var(--charcoal);}
+
+  /* Top row — eyebrow + slide counter */
+  .top{display:flex;justify-content:space-between;align-items:center;
+       font-size:20px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;}
+  .slide.light .top,.slide.content .top,.slide.quote .top{color:var(--clay);}
+  .slide.dark .top,.slide.cover .top,.slide.cta .top{color:var(--sage);}
+  .count{opacity:.85;}
+
+  /* Body area fills the middle */
+  .body{flex:1;display:flex;flex-direction:column;justify-content:center;}
+
+  h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.08;}
+
+  /* COVER / hook */
+  .cover .hook{font-size:88px;line-height:1.06;}
+  .cover .hook em{font-style:italic;color:var(--clay);}
+  .cover .rule{width:150px;height:6px;background:var(--clay);margin:38px 0;}
+  .cover .sub{font-family:var(--font-heading);font-style:italic;font-size:34px;color:var(--sage);max-width:22ch;}
+
+  /* CONTENT — big number + heading + body + open loop */
+  .content .num,.dark .num{font-family:var(--font-heading);font-size:120px;line-height:.9;color:var(--clay);margin-bottom:22px;}
+  .content h2,.dark h2{font-size:60px;margin-bottom:26px;}
+  .content .p,.dark .p{font-size:34px;line-height:1.45;max-width:26ch;}
+  .content .p b,.dark .p b{color:var(--forest);}
+  .dark .p b{color:var(--sage);}
+  .loop{margin-top:auto;padding-top:34px;font-family:var(--font-heading);font-style:italic;font-size:30px;}
+  .content .loop{color:var(--clay);}
+  .dark .loop{color:var(--sage);}
+
+  /* QUOTE */
+  .quote .mark{font-family:var(--font-heading);font-size:200px;line-height:.5;color:var(--forest);height:96px;}
+  .quote blockquote{font-family:var(--font-heading);font-style:italic;font-size:62px;line-height:1.2;color:var(--charcoal);margin:18px 0 28px;}
+  .quote .by{font-size:24px;letter-spacing:.06em;color:var(--clay);text-transform:uppercase;font-weight:600;}
+
+  /* CTA */
+  .cta h2{font-size:66px;color:var(--linen);margin-bottom:28px;max-width:20ch;}
+  .cta .p{font-size:34px;line-height:1.45;color:var(--sage);max-width:26ch;margin-bottom:40px;}
+  .cta .pill{display:inline-block;background:var(--sage);color:var(--forest);font-family:var(--font-body);
+             font-weight:700;font-size:30px;letter-spacing:.04em;text-transform:uppercase;padding:22px 34px;}
+  .cta .follow{margin-top:34px;font-size:26px;color:var(--linen);}
+  .cta .follow b{color:var(--sage);}
+
+  /* Swipe cue (bottom-right). Add class "final" to a slide to hide it (last slide). */
+  .swipe{position:absolute;right:var(--pad);bottom:var(--pad);font-size:46px;line-height:1;}
+  .slide.light .swipe,.slide.content .swipe,.slide.quote .swipe{color:var(--clay);}
+  .slide.dark .swipe,.slide.cover .swipe,.slide.cta .swipe{color:var(--sage);}
+  .slide.final .swipe{display:none;}
+
+  /* Footer brand line */
+  .foot{position:absolute;left:var(--pad);bottom:var(--pad);font-size:22px;letter-spacing:.14em;
+        text-transform:uppercase;font-weight:600;}
+  .slide.light .foot,.slide.content .foot,.slide.quote .foot{color:var(--clay);}
+  .slide.dark .foot,.slide.cover .foot,.slide.cta .foot{color:var(--sage);}
+
+  /* PRINT — one perfect 1080x1350 slide per page */
+  @page{size:1080px 1350px;margin:0;}
+  @media print{
+    body{background:#fff;}
+    .howto{display:none;}
+    .deck{display:block;gap:0;padding:0;}
+    .slide{box-shadow:none;page-break-after:always;break-after:page;}
+    .slide:last-child{page-break-after:auto;}
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <div class="howto">
+    <b>To post this:</b> Print this page (Cmd/Ctrl&nbsp;P) → <b>Save as PDF</b>. Each slide
+    becomes one 1080×1350 image — upload them to Instagram in order. This grey box won't print.
+    <em>(Assistant: replace the example slides below with the real ones; keep the &lt;style&gt; block.)</em>
+  </div>
+
+  <!-- ============ SLIDE 1 · COVER / HOOK ============ -->
+  <section class="slide cover" data-count="1/10">
+    <div class="top"><span>AI Her Way</span><span class="count">01 / 10</span></div>
+    <div class="body">
+      <h1 class="hook">I was today years old when I realised <em>discounting</em> was costing me everything.</h1>
+      <div class="rule"></div>
+      <p class="sub">The pricing lesson I learned the expensive way →</p>
+    </div>
+    <span class="foot">@yourhandle</span>
+    <span class="swipe">→</span>
+  </section>
+
+  <!-- ============ SLIDE 2 · CREDIBILITY + ROADMAP (own hook) ============ -->
+  <section class="slide content" data-count="2/10">
+    <div class="top"><span>The story</span><span class="count">02 / 10</span></div>
+    <div class="body">
+      <h2>I nearly discounted my way out of business.</h2>
+      <p class="p">Eight years in, I finally ran the maths I'd been too scared to look at. <b>Here's what it showed — and what I did instead.</b></p>
+      <p class="loop">First, the real cost of a discount →</p>
+    </div>
+    <span class="foot">@yourhandle</span>
+    <span class="swipe">→</span>
+  </section>
+
+  <!-- ============ SLIDE 3 · CONTENT (light) ============ -->
+  <section class="slide content" data-count="3/10">
+    <div class="top"><span>Point one</span><span class="count">03 / 10</span></div>
+    <div class="body">
+      <div class="num">01</div>
+      <h2>A discount isn't a cut. It's a multiplier.</h2>
+      <p class="p">Drop your price 20% and you don't lose 20% — you lose the <b>margin</b> that was keeping the lights on.</p>
+      <p class="loop">But here's the part nobody says out loud →</p>
+    </div>
+    <span class="foot">@yourhandle</span>
+    <span class="swipe">→</span>
+  </section>
+
+  <!-- ============ SLIDE 4 · CONTENT (dark, for rhythm) ============ -->
+  <section class="slide content dark" data-count="4/10">
+    <div class="top"><span>Point two</span><span class="count">04 / 10</span></div>
+    <div class="body">
+      <div class="num">02</div>
+      <h2>Cheaper clients cost more.</h2>
+      <p class="p">The lowest-paying clients asked for the <b>most</b> — more calls, more edits, more reassurance.</p>
+      <p class="loop">So I did the opposite of what felt safe →</p>
+    </div>
+    <span class="foot">@yourhandle</span>
+    <span class="swipe">→</span>
+  </section>
+
+  <!-- ============ SLIDE 5 · QUOTE moment ============ -->
+  <section class="slide quote" data-count="5/10">
+    <div class="top"><span>The turn</span><span class="count">05 / 10</span></div>
+    <div class="body">
+      <div class="mark">&ldquo;</div>
+      <blockquote>I raised my prices and fired half my client list. Revenue went up 30%.</blockquote>
+      <p class="by">— the maths on the next slide</p>
+    </div>
+    <span class="foot">@yourhandle</span>
+    <span class="swipe">→</span>
+  </section>
+
+  <!-- ============ SLIDE 6 · CONTENT ============ -->
+  <section class="slide content" data-count="6/10">
+    <div class="top"><span>The maths</span><span class="count">06 / 10</span></div>
+    <div class="body">
+      <div class="num">03</div>
+      <h2>Fewer clients. Higher price. More profit.</h2>
+      <p class="p">Half the clients at <b>[your %]</b> more each — and suddenly the calendar had room to breathe.</p>
+      <p class="loop">What that changed in the work →</p>
+    </div>
+    <span class="foot">@yourhandle</span>
+    <span class="swipe">→</span>
+  </section>
+
+  <!-- ============ SLIDE 7 · CONTENT (dark) ============ -->
+  <section class="slide content dark" data-count="7/10">
+    <div class="top"><span>What changed</span><span class="count">07 / 10</span></div>
+    <div class="body">
+      <div class="num">04</div>
+      <h2>Better clients. Better work.</h2>
+      <p class="p">People who pay well <b>trust</b> the work. The results got better because the pressure eased.</p>
+      <p class="loop">And what it changed in me →</p>
+    </div>
+    <span class="foot">@yourhandle</span>
+    <span class="swipe">→</span>
+  </section>
+
+  <!-- ============ SLIDE 8 · CONTENT ============ -->
+  <section class="slide content" data-count="8/10">
+    <div class="top"><span>The lesson</span><span class="count">08 / 10</span></div>
+    <div class="body">
+      <div class="num">05</div>
+      <h2>The cheapest option rarely survives.</h2>
+      <p class="p">Competing on price is a race you win by losing. <b>Compete on the result instead.</b></p>
+      <p class="loop">If I could tell past-me one thing →</p>
+    </div>
+    <span class="foot">@yourhandle</span>
+    <span class="swipe">→</span>
+  </section>
+
+  <!-- ============ SLIDE 9 · RECAP ============ -->
+  <section class="slide content dark" data-count="9/10">
+    <div class="top"><span>Recap</span><span class="count">09 / 10</span></div>
+    <div class="body">
+      <h2>If you're wobbling on price:</h2>
+      <p class="p">Don't discount. Raise the price and raise the <b>clarity of the result</b>. The right clients will stay.</p>
+      <p class="loop">One thing before you go →</p>
+    </div>
+    <span class="foot">@yourhandle</span>
+    <span class="swipe">→</span>
+  </section>
+
+  <!-- ============ SLIDE 10 · CTA (final — no swipe cue) ============ -->
+  <section class="slide cta final" data-count="10/10">
+    <div class="top"><span>Your move</span><span class="count">10 / 10</span></div>
+    <div class="body">
+      <h2>Want the exact pricing maths I used?</h2>
+      <p class="p">I'll send you the one-page breakdown — no charge.</p>
+      <span class="pill">Comment “PRICING” &amp; I'll DM it to you</span>
+      <p class="follow">Follow <b>@yourhandle</b> for the honest maths behind running a business.</p>
+    </div>
+    <span class="foot">AI Her Way · Dr Nici Sweaney</span>
+  </section>
+
+</div>
+</body>
+</html>

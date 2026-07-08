@@ -12,13 +12,13 @@
     {
       "name": "ai-herway-founder-command-centre",
       "source": "./ai-herway-founder-command-centre",
-      "description": "Five agentic staff members for founders: Board of Advisors, Daily Brief, Content Engine, Meeting Prep & Follow-up, and Inbox Triage. Built for the Women's AI Boardroom Retreat.",
-      "version": "0.2.0",
+      "description": "Six agentic staff members for founders: Board of Advisors, Daily Brief, Content Engine, Instagram Carousel Creator, Meeting Prep & Follow-up, and Inbox Triage. Built for the Women's AI Boardroom Retreat.",
+      "version": "0.3.0",
       "author": {
         "name": "Dr Nici Sweaney — AI Her Way"
       },
       "homepage": "https://www.aiherway.com.au",
-      "keywords": ["founder", "ai", "command-centre", "aiherway", "superleaders"]
+      "keywords": ["founder", "ai", "command-centre", "carousel", "instagram", "aiherway", "superleaders"]
     }
   ]
 }
