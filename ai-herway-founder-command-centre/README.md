@@ -41,11 +41,11 @@ session with your Command Centre running.
 
 ## The six skills, and what comes next
 
-These six are your foundation. The full **AI Her Way Agentic Team** — deeper role
-cards, the 90-day build order, and the community building alongside you — lives inside
-the **AI for Impact Hub**.
+These six are your foundation. The full **AI Her Way Agentic Team** — every department,
+deeper role cards, the 90-day build order, and the community building alongside you —
+lives inside the **AI for Impact Hub**. Install once, keep growing.
 
-→ Build out your whole team at **aiherway.com.au**
+→ Join the AI for Impact Hub and build out your whole system: **https://aiherway.com.au/hub**
 
 ---
 © AI Her Way · Dr Nici Sweaney · Australian English throughout.
