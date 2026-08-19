@@ -70,6 +70,10 @@
   .code{display:flex;align-items:center;gap:10px;background:#1C1D18;border-left:5px solid var(--clay);padding:14px 16px;margin:6px 0 18px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:var(--linen);word-break:break-all;}
   .code button{margin-left:auto;flex:0 0 auto;background:var(--sage);color:var(--forest);border:0;font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 11px;cursor:pointer;}
   .note{font-size:13px;color:var(--sage);margin-top:6px;}
+  .warn{font-size:13.5px;color:var(--linen);background:#1C1D18;border-left:5px solid var(--clay);padding:14px 16px;margin:0 0 22px;}
+  .warn b{color:var(--clay);}
+  .install-foot{font-size:13.5px;color:var(--sage);margin-top:26px;}
+  .install-foot b{color:var(--linen);}
 
   /* FALLBACK STRIP */
   .strip{background:var(--forest);color:var(--linen);padding:40px 0;}
@@ -110,7 +114,7 @@
     </div>
     <div class="hero-meta">
       <div><div class="k">Built for</div><div class="v">Founders &amp; small teams</div></div>
-      <div><div class="k">Runs in</div><div class="v">Claude desktop app</div></div>
+      <div><div class="k">Runs in</div><div class="v">Claude desktop, web &amp; Cowork</div></div>
       <div><div class="k">Inside</div><div class="v">6 agentic staff members</div></div>
       <div><div class="k">By</div><div class="v">Dr Nici Sweaney</div></div>
     </div>
@@ -175,14 +179,16 @@
     <div class="methods">
       <div class="method">
         <div class="num">01</div>
-        <h3>Quick — download the file</h3>
+        <h3>Quick — upload the file</h3>
         <div class="sub">Best for getting started today</div>
         <ol>
-          <li>Click <b>Download the plugin</b> to save the file.</li>
-          <li>Open it in the <b>Claude desktop app</b>.</li>
-          <li>Review the skills and press <b>Add</b>.</li>
-          <li>Test it: type <b>“be my board of advisors”</b> — you’re in.</li>
+          <li>Click <b>Download the plugin</b> to save the file. Leave it in Downloads, do not open it.</li>
+          <li>In Claude, click <b>Customize</b> in the left sidebar, then open the <b>Plugins</b> tab.</li>
+          <li>Choose the <b>upload</b> option and select the file you just downloaded.</li>
+          <li>Review the six skills and click <b>Install</b>.</li>
+          <li>Test it: start a new chat and type <b>“be my board of advisors”</b> — you’re in.</li>
         </ol>
+        <p class="warn"><b>Do not drag the file into a chat.</b> Attaching it to a message installs nothing, Claude just reads it as a document. Installing only happens on the Plugins page.</p>
         <a class="btn btn-primary" href="ai-herway-founder-command-centre.plugin" download>Download the plugin</a>
       </div>
       <div class="method">
@@ -190,17 +196,19 @@
         <h3>Ongoing — add our library</h3>
         <div class="sub">Auto-updates as we add new staff</div>
         <ol>
-          <li>In Claude, open the plugin / marketplace settings.</li>
-          <li>Add this as a marketplace source:</li>
+          <li>In Claude, click <b>Customize</b> in the left sidebar, then open the <b>Plugins</b> tab.</li>
+          <li>Click <b>Add marketplace</b> and paste this source:</li>
         </ol>
         <div class="code"><span id="src">your-github-username/founder-command-centre</span><button onclick="copySrc()">Copy</button></div>
         <ol start="3">
-          <li>Install <b>AI Her Way Founder Command Centre</b> from the library.</li>
+          <li>Keep <b>Sync automatically</b> turned on, then click <b>Add</b>.</li>
+          <li>Click <b>Browse</b>, find <b>AI Her Way Founder Command Centre</b>, and click <b>Install</b>.</li>
           <li>You’ll get every future skill and update automatically.</li>
         </ol>
         <p class="note">New agents are added to this same library over time — install once, grow forever.</p>
       </div>
     </div>
+    <p class="install-foot">Working in <b>Cowork</b>? Open the <b>Cowork</b> tab first, then <b>Customize</b>. Plugins need a paid Claude plan; if you don’t see a Plugins tab, use the copy-paste version below.</p>
   </div>
 </section>
 
