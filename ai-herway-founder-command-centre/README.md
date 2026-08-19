@@ -23,10 +23,17 @@ you have a small team that never sleeps:
 
 ## How to install
 
-1. Open the `.plugin` file in the Claude desktop app.
-2. Review the skills and press **Add / Install**.
-3. Test it: type *"be my board of advisors"* — Claude should ask what you'd like the
-   board to weigh in on. You're in.
+1. Download the `.plugin` file. Leave it in your Downloads folder, do not open it.
+2. In Claude, click **Customize** in the left sidebar, then open the **Plugins** tab.
+   (In Cowork, open the **Cowork** tab first, then **Customize**.)
+3. Choose the **upload** option and select the `.plugin` file.
+4. Review the six skills and click **Install**.
+5. Test it: start a new chat and type *"be my board of advisors"* — Claude should ask
+   what you'd like the board to weigh in on. You're in.
+
+Dragging the file into a chat does not install it, Claude just reads it as a document.
+Prefer automatic updates? Instead of uploading the file, go to **Customize → Plugins →
+Add marketplace** and paste `ai-herway/founder-command-centre`.
 
 Then make it yours — tell Claude who you want on your board, your voice for content,
 your regular meetings and inbox rules. Each skill includes a one-time customise step,

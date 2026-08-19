@@ -1,6 +1,6 @@
 {
   "name": "ai-herway-founder-command-centre",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "The AI Her Way Founder Command Centre — a starter set of agentic staff members for founders, built to run inside Claude. Six skills: a Board of Advisors that pressure-tests your decisions, a Chief of Staff that runs your daily brief, a Content Engine, a Carousel Creator that turns one idea into a finished on-brand Instagram carousel, a Meeting Prep & Follow-up assistant, and an Inbox Triage assistant. Built for the Women's AI Boardroom Retreat with Nikki Fogden-Moore.",
   "author": {
     "name": "Dr Nici Sweaney — AI Her Way"

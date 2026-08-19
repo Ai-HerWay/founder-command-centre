@@ -20,9 +20,11 @@ The **Founder Command Centre** plugin gives you six agentic staff members inside
 
 ## How people install it
 
-**Quick (download the file):** download `ai-herway-founder-command-centre.plugin`, open it in the Claude desktop app, press Add.
+**Quick (upload the file):** download `ai-herway-founder-command-centre.plugin`, then in Claude open **Customize → Plugins**, choose the upload option, select the file, and click **Install**. The file does not install by being opened, and dragging it into a chat only attaches it as a document.
 
-**Ongoing (add the library):** add this repository as a marketplace source in Claude, then install the Command Centre — you'll get every future update automatically.
+**Ongoing (add the library):** in Claude open **Customize → Plugins → Add marketplace**, paste `ai-herway/founder-command-centre`, then install the Command Centre from **Browse** — you'll get every future update automatically.
+
+In Cowork, open the **Cowork** tab first, then **Customize**. Plugins require a paid Claude plan.
 
 ## Repository contents
 
@@ -31,7 +33,7 @@ The **Founder Command Centre** plugin gives you six agentic staff members inside
 | `index.html` | The hosted landing / download page (served by GitHub Pages) |
 | `ai-herway-founder-command-centre.plugin` | The downloadable plugin bundle |
 | `.claude-plugin/marketplace.json` | The marketplace manifest (lists the plugin) |
-| `ai-herway-founder-command-centre/` | The plugin source (manifest + 5 skills) |
+| `ai-herway-founder-command-centre/` | The plugin source (manifest + 6 skills) |
 | `SETUP.md` | Step-by-step: create the repo, turn on the website, get your links |
 
 ## Going live

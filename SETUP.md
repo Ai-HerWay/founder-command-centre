@@ -52,8 +52,13 @@ lose the auto-updating library feature, which only the GitHub route gives you.)
 ## Step 5 — For the retreat (Thursday)
 
 The fastest path for the room: share the live page link, or point the deck's QR code
-at it. Each woman taps **Download the plugin**, opens it in Claude, presses **Add**.
-The copy-paste fallback (in the Noosa folder) covers anyone who can't install.
+at it. Each woman taps **Download the plugin**, then in Claude goes to **Customize →
+Plugins**, chooses the upload option, picks the downloaded file, and clicks **Install**.
+
+Flag this in the room: the file does **not** install by opening it, and dragging it
+into a chat only attaches it as a document. Installing happens on the Plugins page.
+In Cowork, open the **Cowork** tab first, then **Customize**. Plugins need a paid
+Claude plan, so the copy-paste fallback (in the Noosa folder) covers anyone on Free.
 
 ---
 
