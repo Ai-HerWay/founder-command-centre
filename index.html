@@ -37,8 +37,19 @@
   .rule{width:120px;height:5px;background:var(--clay);margin:30px 0;}
   .hero .lead{font-family:var(--font-heading);font-style:italic;font-size:clamp(18px,2.4vw,22px);color:var(--sage);max-width:42ch;margin-bottom:36px;}
   .cta-row{display:flex;gap:16px;flex-wrap:wrap;}
-  .value-note{margin-top:30px;max-width:54ch;background:#2E302A;border:1px solid #44463C;border-left:5px solid var(--clay);padding:16px 18px;font-size:14px;color:var(--sage);}
-  .value-note b{color:var(--linen);font-weight:600;}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:56px;align-items:center;}
+  .hero-copy{min-width:0;}
+  .sticker{display:flex;flex-direction:column;align-items:center;gap:18px;}
+  .seal{position:relative;width:244px;height:244px;border-radius:50%;background:var(--clay);color:var(--linen);
+        display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+        transform:rotate(-7deg);box-shadow:0 20px 44px rgba(0,0,0,.38);}
+  .seal::before{content:"";position:absolute;inset:12px;border-radius:50%;border:1.5px solid rgba(241,234,225,.5);}
+  .seal::after{content:"";position:absolute;inset:20px;border-radius:50%;border:1px dashed rgba(241,234,225,.32);}
+  .seal .s-top{font-size:9.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;line-height:1.7;max-width:12ch;color:rgba(241,234,225,.88);}
+  .seal .s-amt{font-family:var(--font-heading);font-size:42px;line-height:1;margin:9px 0 9px;}
+  .seal .s-rule{width:46px;height:2px;background:rgba(241,234,225,.55);margin-bottom:9px;}
+  .seal .s-bot{font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;line-height:1.6;}
+  .sticker-foot{font-size:12.5px;color:var(--sage);text-align:center;max-width:24ch;line-height:1.5;}
   .hero-meta{display:flex;gap:46px;flex-wrap:wrap;margin-top:48px;}
   .hero-meta .k{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:6px;}
   .hero-meta .v{font-size:14px;color:var(--linen);}
@@ -90,6 +101,12 @@
   footer a{color:var(--sage);text-decoration:none;border-bottom:1px solid var(--clay);}
   footer .small{font-size:12px;letter-spacing:.04em;}
 
+  @media(max-width:940px){
+    .hero-grid{grid-template-columns:1fr;gap:40px;justify-items:start;}
+    .seal{width:212px;height:212px;}
+    .seal .s-amt{font-size:37px;}
+    .sticker-foot{text-align:left;}
+  }
   @media(max-width:720px){
     .methods{grid-template-columns:1fr;}
     section{padding:60px 0;}
@@ -106,6 +123,8 @@
       <span>AI Her Way</span>
       <span>Founder Command Centre</span>
     </div>
+    <div class="hero-grid">
+    <div class="hero-copy">
     <p class="eyebrow">A starter team of agentic staff · for founders</p>
     <h1>The Founder <em>Command Centre</em></h1>
     <div class="rule"></div>
@@ -114,7 +133,17 @@
       <a class="btn btn-primary" href="ai-herway-founder-command-centre.plugin" download>Download the plugin</a>
       <a class="btn btn-ghost" href="#install">How to install</a>
     </div>
-    <p class="value-note"><b>Estimated standalone value: US$277.</b> This is a bundle-exclusive standalone resource and is not currently sold separately.</p>
+    </div>
+    <aside class="sticker">
+      <div class="seal" role="img" aria-label="Estimated standalone value: US$277. Bundle exclusive.">
+        <span class="s-top">Estimated standalone value</span>
+        <span class="s-amt">US$277</span>
+        <span class="s-rule"></span>
+        <span class="s-bot">Bundle<br>exclusive</span>
+      </div>
+      <p class="sticker-foot">A bundle-exclusive standalone resource, not currently sold separately.</p>
+    </aside>
+    </div>
     <div class="hero-meta">
       <div><div class="k">Built for</div><div class="v">Founders &amp; small teams</div></div>
       <div><div class="k">Runs in</div><div class="v">Claude desktop, web &amp; Cowork</div></div>
