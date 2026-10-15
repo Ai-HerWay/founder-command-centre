@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Founder Command Centre · AI Her Way</title>
-<meta name="description" content="A personal AI board of advisors and a daily brief, installed and running inside Claude. Five agentic staff members for founders, by Dr Nici Sweaney — AI Her Way.">
+<meta name="description" content="A personal AI board of advisors and a daily brief, installed and running inside Claude. Six agentic staff members for founders, by Dr Nici Sweaney — AI Her Way.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
@@ -94,6 +94,19 @@
   .strip p{font-family:var(--font-heading);font-style:italic;font-size:19px;max-width:60ch;}
   .strip b{color:var(--sage);font-style:normal;}
 
+  /* COPY-PASTE */
+  .paste{background:var(--cream);}
+  .paste .sec-head p.lede{font-size:16px;color:var(--ink);max-width:62ch;margin-top:14px;}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px;counter-reset:step;}
+  .steps li{list-style:none;background:var(--linen);border-left:5px solid var(--clay);padding:18px 20px;font-size:14.5px;color:var(--ink);}
+  .steps li b{color:var(--forest);}
+  .steps li::before{counter-increment:step;content:"0" counter(step);display:block;font-family:var(--font-heading);font-size:24px;color:var(--clay);line-height:1;margin-bottom:8px;}
+  .card .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;}
+  .btn-sm{padding:11px 16px;font-size:11px;}
+  .btn-line{background:transparent;color:var(--forest);border:1.5px solid var(--forest);}
+  .card .extra{font-size:13px;color:var(--ink);margin-top:14px;padding-top:14px;border-top:1px solid var(--sage);}
+  .card .extra a{color:var(--clay);font-weight:600;}
+
   /* FOOTER */
   footer{background:var(--charcoal);color:var(--sage);padding:54px 0;border-top:1px solid #44463C;}
   footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
@@ -109,6 +122,7 @@
   }
   @media(max-width:720px){
     .methods{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr;}
     section{padding:60px 0;}
     .hero-meta{gap:28px;}
   }
@@ -240,7 +254,7 @@
         <p class="note">New agents are added to this same library over time — install once, grow forever.</p>
       </div>
     </div>
-    <p class="install-foot">Working in <b>Cowork</b>? Open the <b>Cowork</b> tab first, then <b>Customize</b>. Plugins need a paid Claude plan; if you don’t see a Plugins tab, use the copy-paste version below.</p>
+    <p class="install-foot">Working in <b>Cowork</b>? Open the <b>Cowork</b> tab first, then <b>Customize</b>. Plugins need a paid Claude plan; if you don’t see a Plugins tab, use the <a href="#copy-paste" style="color:var(--linen);">copy-paste version below</a>.</p>
   </div>
 </section>
 
@@ -248,9 +262,76 @@
 <div class="strip">
   <div class="wrap">
     <p><b>No one gets left behind.</b> Can’t install? Every skill also comes as a copy-paste version you can drop straight into a Claude Project — it works exactly the same way.</p>
-    <a class="btn btn-forest" href="https://www.aiherway.com.au" style="border:1.5px solid var(--sage);">Visit AI Her Way</a>
+    <a class="btn btn-forest" href="#copy-paste" style="border:1.5px solid var(--sage);">Get the copy-paste version</a>
   </div>
 </div>
+
+<!-- COPY-PASTE VERSION -->
+<section class="paste" id="copy-paste">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">No Plugins tab?</p>
+      <h2>The copy-paste <em>version</em></h2>
+      <p class="lede">Each team member is one block of text. Paste it into a Claude Project and it runs the same way as the plugin.</p>
+    </div>
+    <ol class="steps">
+      <li>In Claude, create a new <b>Project</b> and name it after the team member, for example <b>Daily Brief</b>.</li>
+      <li>Click <b>Copy</b> on that team member below, then paste it into the Project’s <b>instructions</b> and save.</li>
+      <li>Start a chat inside that Project and use the trigger phrase, for example <b>“my daily brief”</b>.</li>
+    </ol>
+    <div class="grid">
+      <div class="card">
+        <h3>Board of Advisors</h3>
+        <span class="trigger">“Be my board of advisors”</span>
+        <div class="actions">
+          <button class="btn btn-forest btn-sm" data-copy="founder-board-of-advisors">Copy</button>
+          <a class="btn btn-line btn-sm" href="ai-herway-founder-command-centre/skills/founder-board-of-advisors/SKILL.md" download="board-of-advisors.md">Download</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Daily Brief</h3>
+        <span class="trigger">“My daily brief”</span>
+        <div class="actions">
+          <button class="btn btn-forest btn-sm" data-copy="founder-daily-brief">Copy</button>
+          <a class="btn btn-line btn-sm" href="ai-herway-founder-command-centre/skills/founder-daily-brief/SKILL.md" download="daily-brief.md">Download</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Content Engine</h3>
+        <span class="trigger">“Repurpose this”</span>
+        <div class="actions">
+          <button class="btn btn-forest btn-sm" data-copy="founder-content-repurposer">Copy</button>
+          <a class="btn btn-line btn-sm" href="ai-herway-founder-command-centre/skills/founder-content-repurposer/SKILL.md" download="content-engine.md">Download</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Carousel Creator</h3>
+        <span class="trigger">“Make me a carousel”</span>
+        <div class="actions">
+          <button class="btn btn-forest btn-sm" data-copy="founder-carousel-creator">Copy</button>
+          <a class="btn btn-line btn-sm" href="ai-herway-founder-command-centre/skills/founder-carousel-creator/SKILL.md" download="carousel-creator.md">Download</a>
+        </div>
+        <p class="extra">Also <a href="ai-herway-founder-command-centre/skills/founder-carousel-creator/assets/carousel-template.html" download="carousel-template.html">download the slide template</a> and add it to this Project’s files, so it can build the slide images.</p>
+      </div>
+      <div class="card">
+        <h3>Meeting Prep &amp; Follow-up</h3>
+        <span class="trigger">“Prep me for my meeting”</span>
+        <div class="actions">
+          <button class="btn btn-forest btn-sm" data-copy="founder-meeting-prep">Copy</button>
+          <a class="btn btn-line btn-sm" href="ai-herway-founder-command-centre/skills/founder-meeting-prep/SKILL.md" download="meeting-prep.md">Download</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Inbox Triage</h3>
+        <span class="trigger">“Triage my inbox”</span>
+        <div class="actions">
+          <button class="btn btn-forest btn-sm" data-copy="founder-inbox-triage">Copy</button>
+          <a class="btn btn-line btn-sm" href="ai-herway-founder-command-centre/skills/founder-inbox-triage/SKILL.md" download="inbox-triage.md">Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- THE WHOLE SYSTEM · HUB CTA -->
 <section class="what hub">
@@ -295,6 +376,34 @@
     navigator.clipboard && navigator.clipboard.writeText(t);
     var b = event.target; var o = b.textContent; b.textContent='Copied'; setTimeout(function(){b.textContent=o;},1200);
   }
+
+  // Copy-paste version: prefetch each skill so Copy writes to the clipboard
+  // inside the click (Safari blocks clipboard writes after an async fetch).
+  (function(){
+    var base = 'ai-herway-founder-command-centre/skills/';
+    var cache = {};
+    var btns = document.querySelectorAll('[data-copy]');
+    btns.forEach(function(b){
+      var name = b.getAttribute('data-copy');
+      var url = base + name + '/SKILL.md';
+      fetch(url).then(function(r){ return r.ok ? r.text() : null; })
+        .then(function(t){ if(t) cache[name] = t; }).catch(function(){});
+      b.addEventListener('click', function(){
+        var t = cache[name];
+        function done(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy'; }, 1500); }
+        function fallback(){ window.open(url, '_blank'); }
+        if(!t){ fallback(); return; }
+        // Synchronous copy first, while the click still counts as a user gesture.
+        var ta = document.createElement('textarea');
+        ta.value = t; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        var ok = false; try{ ok = document.execCommand('copy'); }catch(e){}
+        document.body.removeChild(ta);
+        if(ok){ done(); return; }
+        if(navigator.clipboard){ navigator.clipboard.writeText(t).then(done, fallback); } else { fallback(); }
+      });
+    });
+  })();
 </script>
 </body>
 </html>
